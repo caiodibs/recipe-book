@@ -4,6 +4,7 @@
             Create new recipe
         </button>
     </div>
+    <!-- Recipe List -->
     <a href="#" class="list-group-item list-group-item-action"
     *ngFor="let recipeList of recipes">
         <div class="col-9">
@@ -11,7 +12,7 @@
             <p>{{ recipeList.description }}</p>
         </div>
         <div class="col-3 m-auto">
-            <img [src]="recipeList.image" alt="{{ recipeList.name }}" class="img-fluid">
+            <img [src]="recipeList.image" alt="Image of a {{ recipeList.name }}" class="img-fluid">
         </div>
     </a>
 </div>
