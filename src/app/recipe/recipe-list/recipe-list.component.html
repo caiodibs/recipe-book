@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-12 m-3">
+        <button class="btn btn-success">
+            Create new recipe
+        </button>
+    </div>
+    <a href="#" class="list-group-item list-group-item-action"
+    *ngFor="let recipeList of recipes">
+        <div class="col-9">
+            <h3>{{ recipeList.name }}</h3>
+            <p>{{ recipeList.description }}</p>
+        </div>
+        <div class="col-3 m-auto">
+            <img [src]="recipeList.image" alt="{{ recipeList.name }}" class="img-fluid">
+        </div>
+    </a>
+</div>
+<app-recipe-item></app-recipe-item>
