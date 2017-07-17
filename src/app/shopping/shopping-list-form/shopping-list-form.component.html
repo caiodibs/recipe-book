@@ -1,3 +1,35 @@
-<p>
-  shopping-list-form works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <form>
+      <div class="row">
+        <div class="form-group col-sm-5">
+          <label for="ingredientName">Ingredient</label>
+          <input
+            type="text"
+            name="ingredientName"
+            id="ingredientName"
+            class="form-control"
+            placeholder="Ingredient Name"
+            aria-label="Type the ingredient name"
+          >
+        </div>
+        <div class="form-group col-sm-2">
+          <label for="ingredientAmount">Quantity</label>
+          <input
+            type="number"
+            name="ingredientAmount"
+            id="ingredientAmount"
+            class="form-control"
+            placeholder="Ingredient Amount"
+            aria-label="Enter with amount needed"
+          >
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-success">Save Ingredient</button>
+          <button type="button" class="btn btn-danger">Remove Ingredient</button>
+          <button type="button" class="btn btn-default">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
