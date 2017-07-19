@@ -1,11 +1,11 @@
 <!-- Header -->
-<app-menu></app-menu>
+<app-menu (menuSelected)="onNavigate($event)"></app-menu>
 <!-- Main -->
 <div class="container" role="main">
   <div class="row">
     <div class="col-12">
-      <app-recipe></app-recipe>
-      <app-shopping></app-shopping>
+      <app-recipe *ngIf="loadedMenu === 'recipe'"></app-recipe>
+      <app-shopping *ngIf="loadedMenu === 'shopping'"></app-shopping>
     </div>
   </div>
 </div>
