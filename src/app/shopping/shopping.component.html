@@ -1,7 +1,6 @@
 <div class="row">
   <div class="col-12">
-    <app-shopping-list-form
-    (ingredientAdded)="onAddIngredient($event)"></app-shopping-list-form>
+    <app-shopping-list-form></app-shopping-list-form>
   </div>
   <div class="col-md-12">
     <div class="list-group">
@@ -10,7 +9,7 @@
         class="list-group-item list-group-item-action"
         *ngFor="let ingredient of ingredients"
       >
-      {{ ingredient.name }}} ({{ ingredient.amount }})
+      {{ ingredient.name }} ({{ ingredient.amount }})
       </a>
     </div>
   </div>
