@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  loadedMenu = '';
+    loadedMenu = '';
 
-  onNavigate(selectedMenu: string) {
-    this.loadedMenu = selectedMenu;
-  }
+    onNavigate(selectedMenu: string) {
+        this.loadedMenu = selectedMenu;
+    }
 }

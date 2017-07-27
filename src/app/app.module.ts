@@ -13,21 +13,21 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { DropdownDirective } from './shared/dropdow.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    ShoppingListFormComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    RecipeDetailComponent,
-    RecipeComponent,
-    ShoppingComponent,
-    DropdownDirective
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [ShoppingService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MenuComponent,
+        ShoppingListFormComponent,
+        RecipeListComponent,
+        RecipeItemComponent,
+        RecipeDetailComponent,
+        RecipeComponent,
+        ShoppingComponent,
+        DropdownDirective
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [ShoppingService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

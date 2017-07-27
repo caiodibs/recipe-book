@@ -3,21 +3,21 @@ import { Recipe } from '.././../recipe.model';
 import { Component, OnInit, Input, } from '@angular/core';
 
 @Component({
-  selector: 'app-recipe-item',
-  templateUrl: './recipe-item.component.html',
-  styleUrls: ['./recipe-item.component.scss']
+    selector: 'app-recipe-item',
+    templateUrl: './recipe-item.component.html',
+    styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent implements OnInit {
 
-  @Input() recipes: Recipe;
+    @Input() recipes: Recipe;
 
-  constructor(private recipeService: RecipeService) { }
+    constructor(private recipeService: RecipeService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  onSelectItem( ) {
-    this.recipeService.getDetail(this.recipes);
-  }
+    onSelectItem( ) {
+        this.recipeService.getDetail(this.recipes);
+    }
 
 }
