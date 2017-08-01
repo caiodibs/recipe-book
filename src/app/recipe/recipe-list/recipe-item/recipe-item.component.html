@@ -1,7 +1,6 @@
 
-<a href="#"
-class="list-group-item list-group-item-action"
-(click)="onSelectItem()">
+<a [routerLink]="[index]" routLinkActive="list-group-item-active"
+class="list-group-item list-group-item-action">
     <div class="col-9">
         <h3>{{ recipes.name }}</h3>
         <p>{{ recipes.description }}</p>

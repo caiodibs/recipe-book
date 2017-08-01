@@ -23,6 +23,9 @@ export class RecipeService {
     getRecipes() {
         return this.recipes.slice();
     }
+    getOneRecipe(id: number) {
+        return this.recipes.slice()[id];
+    }
     getDetail(param) {
         this.recipeSelected.emit(param);
     }

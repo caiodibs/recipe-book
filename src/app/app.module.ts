@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { ShoppingService } from './shopping/shopping.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.comp
 import { RecipeComponent } from './recipe/recipe.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { DropdownDirective } from './shared/dropdow.directive';
+import { RecipeDefaultComponent } from './recipe/recipe-default/recipe-default.component';
 
 @NgModule({
     declarations: [
@@ -22,10 +24,12 @@ import { DropdownDirective } from './shared/dropdow.directive';
         RecipeDetailComponent,
         RecipeComponent,
         ShoppingComponent,
-        DropdownDirective
+        DropdownDirective,
+        RecipeDefaultComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        AppRoutingModule
     ],
     providers: [ShoppingService],
     bootstrap: [AppComponent]
