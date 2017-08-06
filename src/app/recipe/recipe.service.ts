@@ -2,7 +2,7 @@ import { Ingredient } from './../shared/ingredient.model';
 import { EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
 export class RecipeService {
-    public recipeSelected = new EventEmitter<Recipe>();
+
     // Setting new recipes
     private recipes: Recipe[] = [
         new Recipe('French fries',
@@ -25,8 +25,5 @@ export class RecipeService {
     }
     getOneRecipe(id: number) {
         return this.recipes.slice()[id];
-    }
-    getDetail(param) {
-        this.recipeSelected.emit(param);
     }
 }

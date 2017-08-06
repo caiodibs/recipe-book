@@ -1,6 +1,7 @@
+import { Subscription } from 'rxjs/Subscription';
 import { ShoppingService } from './shopping.service';
 import { Ingredient } from './../shared/ingredient.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'app-shopping',
@@ -8,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./shopping.component.scss']
 })
 export class ShoppingComponent implements OnInit {
+    private subscription: Subscription;
     ingredients: Ingredient[];
     constructor(private shoppingService: ShoppingService) { }
 
     // Subscribing to receive ingredient changes
     ngOnInit() {
         this.ingredients = this.shoppingService.getIngredient();
-        this.shoppingService.eventChanged.subscribe(
+        this.subscription = this.shoppingService.eventChanged.subscribe(
         (ingredient: Ingredient[]) => {
             this.ingredients = ingredient;
         }
@@ -25,4 +27,8 @@ export class ShoppingComponent implements OnInit {
         this.shoppingService.setIngredient(ingredient)
     }
 
+    // Unsubscribing manualy. Manualy created observables must be destroyed either way.
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
+    }
 }
